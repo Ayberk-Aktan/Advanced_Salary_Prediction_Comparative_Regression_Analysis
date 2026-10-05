@@ -1,43 +1,77 @@
 # 📈 Advanced Salary Prediction & Comparative Regression Analysis
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
+![Python](https://img.shields.io/badge/Python-3.10.11-blue?style=for-the-badge&logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Bu proje, unvan seviyeleri ve çalışan metriklerine dayalı olarak **maaş tahmini** yapmak amacıyla geliştirilmiş kapsamlı bir makine öğrenimi ve istatistiksel analiz çalışmasıdır. Doğrusal ve doğrusal olmayan regresyon modellerinin performansları ($R^2$, MSE vb.) karşılaştırılmış ve veri seti üzerindeki istatistiksel ilişkiler analiz edilmiştir.
+Bu proje, çalışanların unvan seviyelerine göre maaş tahminlerinin yapılması ve farklı regresyon modellerinin performanslarının karşılaştırılması amacıyla geliştirilmiş bir veri analizi ve makine öğrenimi projesidir.
 
 ---
 
-## 📌 Proje Özeti & Öne Çıkanlar
+## 📌 Proje Özeti & Gerçekleştirilen Analizler
 
-* **Veri Analizi & Korelasyon:** Değişkenler arasındaki korelasyon ilişkileri incelemeli ve sabit (varyansı 0 olan) metriklerin analize etkisi ayıklanmıştır.
-* **Eğrisel / Üstel İlişki Tespiti:** Unvan seviyesi arttıkça maaşın üstel bir şekilde artması nedeniyle, standart Doğrusal Regresyon (Linear Regression) yerine Polinomiyal Regresyon ve Logaritmik Dönüşüm yaklaşımlarının başarısı karşılaştırılmıştır.
-* **İstatistiksel Analiz (ANOVA):** Kategorik değişkenlerin maaş üzerindeki anlamlılığı ANOVA ($F$-Testi) ve p-değeri analizleri ile değerlendirilmiştir.
+* **Veri Ön İşleme & Keşifsel Veri Analizi (EDA):** `maaslar_yeni.csv` veri seti incelenmiş; `UnvanSeviyesi`, `Kidem`, `Puan` ve `maas` değişkenleri arasındaki ilişkiler analiz edilmiştir.
+* **Sabit Değişken Tespiti:** Veri setinde varyansı sıfır olan (her satırda aynı değere sahip) `Kidem` ve `Puan` gibi sabit sütunların korelasyon üzerindeki etkileri değerlendirilmiştir.
+* **Model Karşılaştırmaları:** 
+  * Ünvan seviyesi ile maaş arasındaki üstel/doğrusal olmayan ilişkiyi modellemek adına **Linear Regression** ve **Polynomial Regression** gibi regresyon yaklaşımları uygulanmıştır.
+  * Modellerin başarı kriteri olarak $R^2$ (R-Kare / Belirtme Katsayısı) ve hata metrikleri incelenmiştir.
+* **Görselleştirme:** Korelasyon matrisleri (`seaborn.heatmap`) ve model tahmin eğrileri `matplotlib` ile görselleştirilmiştir.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler & Kütüphaneler
+## 🛠️ Teknolojiler & Kütüphaneler
 
-* **Dil:** Python 3.8+
-* **Veri İşleme & Analiz:** `pandas`, `numpy`
+* **Python Sürümü:** 3.10.11
+* **Veri İşleme:** `pandas`, `numpy`
 * **Görselleştirme:** `matplotlib`, `seaborn`
 * **Makine Öğrenimi:** `scikit-learn`
-* **İstatistiksel Modeller:** `statsmodels`
 
 ---
 
-## 📂 Proje Yapısı
+## 📂 Proje Dizin Yapısı
 
 ```text
-Advanced_Salary_Prediction_Comparative_Regression_Analysis/
-│
-├── data/
-│   └── salary_data.csv          # Veri seti
-│
-├── notebooks / scripts/
-│   └── main_analysis.py          # Veri analizi, modelleme ve görselleştirme kodları
-│
-├── requirements.txt             # Gerekli Python paketleri
-├── README.md                    # Proje dokümantasyonu
-└── .gitignore                   # Git tarafından izlenmeyecek dosyalar
+.
+├── maaslar_yeni.csv      # Veri seti
+├── notebooks.ipynb       # Veri analizi, modelleme ve görselleştirme adımları
+├── requirements.txt      # Proje bağımlılıkları
+└── README.md             # Proje dokümantasyonu# 📈 Advanced Salary Prediction & Comparative Regression Analysis
+
+![Python](https://img.shields.io/badge/Python-3.10.11-blue?style=for-the-badge&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+Bu proje, çalışanların unvan seviyelerine göre maaş tahminlerinin yapılması ve farklı regresyon modellerinin performanslarının karşılaştırılması amacıyla geliştirilmiş bir veri analizi ve makine öğrenimi projesidir.
+
+---
+
+## 📌 Proje Özeti & Gerçekleştirilen Analizler
+
+* **Veri Ön İşleme & Keşifsel Veri Analizi (EDA):** `maaslar_yeni.csv` veri seti incelenmiş; `UnvanSeviyesi`, `Kidem`, `Puan` ve `maas` değişkenleri arasındaki ilişkiler analiz edilmiştir.
+* **Sabit Değişken Tespiti:** Veri setinde varyansı sıfır olan (her satırda aynı değere sahip) `Kidem` ve `Puan` gibi sabit sütunların korelasyon üzerindeki etkileri değerlendirilmiştir.
+* **Model Karşılaştırmaları:** 
+  * Ünvan seviyesi ile maaş arasındaki üstel/doğrusal olmayan ilişkiyi modellemek adına **Linear Regression** ve **Polynomial Regression** gibi regresyon yaklaşımları uygulanmıştır.
+  * Modellerin başarı kriteri olarak $R^2$ (R-Kare / Belirtme Katsayısı) ve hata metrikleri incelenmiştir.
+* **Görselleştirme:** Korelasyon matrisleri (`seaborn.heatmap`) ve model tahmin eğrileri `matplotlib` ile görselleştirilmiştir.
+
+---
+
+## 🛠️ Teknolojiler & Kütüphaneler
+
+* **Python Sürümü:** 3.10.11
+* **Veri İşleme:** `pandas`, `numpy`
+* **Görselleştirme:** `matplotlib`, `seaborn`
+* **Makine Öğrenimi:** `scikit-learn`
+
+---
+
+## 📂 Proje Dizin Yapısı
+
+```text
+.
+├── maaslar_yeni.csv      # Veri seti
+├── notebooks.ipynb       # Veri analizi, modelleme ve görselleştirme adımları
+├── requirements.txt      # Proje bağımlılıkları
+└── README.md             # Proje dokümantasyonu
