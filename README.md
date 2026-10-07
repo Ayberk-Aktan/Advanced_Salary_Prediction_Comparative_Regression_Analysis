@@ -96,7 +96,7 @@ Ağaç, tüm bölünmelerde yalnızca `UnvanSeviyesi` (`x[0]`) özelliğini kull
 
 ![R2 Skorları](assets/r2_skorlari.png)
 
-| Model | $R^2$ |
+| Model | R^2 |
 |---|---|
 | Linear Regression | 0.263 |
 | Polynomial Regression | -3.017 |
