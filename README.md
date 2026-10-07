@@ -16,7 +16,7 @@
 | **Veri Ön İşleme & EDA** | `maaslar_yeni.csv` incelenir; `UnvanSeviyesi`, `Kidem`, `Puan` ve `maas` değişkenleri arasındaki ilişkiler analiz edilir. |
 | **Özellik Seçimi** | Korelasyon matrisi ve F-testi (F-Score / P-Value) ile hangi değişkenlerin maaşı açıkladığı belirlenir. |
 | **Modelleme** | Linear Regression, Polynomial Regression, SVR, Decision Tree ve Random Forest modelleri eğitilir. |
-| **Değerlendirme** | Modeller $R^2$ skoru ile karşılaştırılır. |
+| **Değerlendirme** | Modeller R^2 skoru ile karşılaştırılır. |
 | **Görselleştirme** | Korelasyon ısı haritası, F-testi ısı haritaları ve karar ağacı çizimi hazırlanır. |
 
 ---
@@ -104,7 +104,7 @@ Ağaç, tüm bölünmelerde yalnızca `UnvanSeviyesi` (`x[0]`) özelliğini kull
 | Random Forest | 0.605 |
 | **Decision Tree** | **0.803** |
 
-**Yorum:** En yüksek $R^2$ skorunu Decision Tree vermiştir. Polynomial Regression'ın negatif $R^2$ değeri, modelin ortalamayı tahmin etmekten bile kötü performans gösterdiğini ve aşırı öğrenme (overfitting) yaşadığını gösterir. Veri seti küçük olduğu için sonuçlar tek bir veri bölünmesine duyarlı olabilir; çapraz doğrulama (cross-validation) ile teyit edilmesi önerilir.
+**Yorum:** En yüksek R^2 skorunu Decision Tree vermiştir. Polynomial Regression'ın negatif $R^2$ değeri, modelin ortalamayı tahmin etmekten bile kötü performans gösterdiğini ve aşırı öğrenme (overfitting) yaşadığını gösterir. Veri seti küçük olduğu için sonuçlar tek bir veri bölünmesine duyarlı olabilir; çapraz doğrulama (cross-validation) ile teyit edilmesi önerilir.
 
 ---
 
